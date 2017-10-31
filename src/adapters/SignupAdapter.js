@@ -1,7 +1,7 @@
 export default class SignupAdapter {
   static signup(data) {
     return (
-      fetch("http://localhost:3000/api/v1/login", {
+      fetch("http://localhost:3000/api/v1/signup", {
         headers: {
           'accept': 'application/json',
           'content-type': 'application/json'
