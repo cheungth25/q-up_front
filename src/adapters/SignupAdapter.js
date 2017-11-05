@@ -8,7 +8,13 @@ export default class SignupAdapter {
         },
         method: 'POST',
         body: JSON.stringify(data)
-      }).then((data)=>{return data.json()}) //response from login request
+      })
+      .then((response)=>{
+        if (response.ok) {
+          return response.json()
+        }
+        throw Error(response.statusText)
+      })
     )
   }
 }
